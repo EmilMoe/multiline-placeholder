@@ -1,4 +1,4 @@
-#multiline-placeholder
+# multiline-placeholder
 Allows for multiline placeholding text in textareas
 
 Disables itself for Chrome due to native support.
@@ -7,12 +7,12 @@ Disables itself for Chrome due to native support.
 ======
 jQuery 2.1.0 (lower will probably work, but not tested)
 
-#### Tested in
---
+## Tested in
+======
 - Safari 8
 - Firefox 32
 - Chrome 40
 
-#### Usage
---
+## Usage
+======
 Simply include the script and it will detect textareas with multiline placeholders itself.

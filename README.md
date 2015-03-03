@@ -3,7 +3,7 @@ Allows for multiline placeholding text in textareas
 
 Disables itself for Chrome due to native support.
 
-#### Dependencies
+## Dependencies
 ======
 jQuery 2.1.0 (lower will probably work, but not tested)
 

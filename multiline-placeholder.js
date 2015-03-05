@@ -1,4 +1,6 @@
 $(function() {
+  var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+  
   // Disable for chrome which already supports multiline
   if (! (!!window.chrome && !isOpera)) {
     var style = $('<style>textarea[data-placeholder].active { color: #ccc; }</style>')

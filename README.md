@@ -4,7 +4,7 @@ Allows for multiline placeholding text in textareas
 Disables itself for Chrome due to native support.
 
 ## Dependencies
-jQuery 2.1.0 (lower will probably work, but not tested)
+jQuery 1.7.2 or higher
 
 ## Tested in
 - Safari 8

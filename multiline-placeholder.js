@@ -6,6 +6,15 @@ $(function() {
     var style = $('<style>textarea[data-placeholder].active { color: #ccc; }</style>')
     $('html > head').append(style);
     
+    var onBlur = function() {
+      /* Only display placeholder if there's no text inside */
+      if ($(this).val() === '') {
+        var text = $(this).attr('data-placeholder');
+        $(this).val(text);
+        $(this).addClass('active');
+      }
+    };
+    
     $('textarea[placeholder]').each(function(index) {
       var text  = $(this).attr('placeholder');
       var match = /\r|\n/.exec(text);
@@ -15,8 +24,8 @@ $(function() {
       
       $(this).attr('placeholder', '');
       $(this).attr('data-placeholder', text);
-      $(this).addClass('active');
-      $(this).val(text);
+      
+      onBlur.call(this);
     });
     
     $('textarea[data-placeholder]').on('focus', function() {
@@ -27,12 +36,6 @@ $(function() {
       }
     });
     
-    $('textarea[data-placeholder]').on('blur', function() {
-      if ($(this).val() === '') {
-        var text = $(this).attr('data-placeholder');
-        $(this).val(text);
-        $(this).addClass('active');
-      }
-    });
+    $('textarea[data-placeholder]').on('blur', onBlur);
   }
 });

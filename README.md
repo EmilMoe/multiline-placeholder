@@ -1,4 +1,4 @@
-download_count
+[grd_count user="User" repo="MyRepo"]
 
 # multiline-placeholder
 Allows for multiline placeholding text in textareas

@@ -3,10 +3,10 @@ $(function() {
   
   // Disable for chrome which already supports multiline
   if (! (!!window.chrome && !isOpera)) {
-    var style = $('<style>textarea[data-placeholder].active { color: #ccc; }</style>')
+    var style = $('<style>textarea[data-placeholder].active { color: #666; }</style>');
     $('html > head').append(style);
     
-    $('textarea[placeholder]').each(function(index) {
+    $('textarea[placeholder]').each(function(/*index*/) {
       var text  = $(this).attr('placeholder');
       var match = /\r|\n/.exec(text);
       
